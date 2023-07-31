@@ -51,8 +51,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](age-calculator-frander.netlify.app)
+
 
 ## My process
 
@@ -67,9 +67,6 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 The practice for the resolution of logical problems, was a exelent exercise in which cases such as leap days should be taken into account, or if the date was greater with respect to the number of days and months
 
 With vanilla javascript learn to do the validations without the help of bootstrap
-
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
 
 
@@ -95,5 +92,26 @@ The use of flexbox and grid and minimize the use of media queries. Using the pos
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+When laying out a design it is very difficult for everything to look the same in a single attempt. It is much more profitable to copy the structure, then the choice of colors, paddings and margins becomes easier, and avoid using static heights and widths.
+
+Do not forget to test all the cases for the solution of the exercise
+
+## Solution section
+
+To calculate the number of days to the present, there are several considerations, these are the most important:
+-The difference in years must be a variable dependent on the difference between the month entered and the current month.
+-If the current month is greater than the one entered, then a year has not passed, which we must subtract from the difference in years.
+-If the current month is less than the month entered then we must count how much until December and then add the number of the current month.
+-Each previous case must also consider the cases, submitted day and current day. Which of the 2 is greater and how will we do the subtraction?
+
+With this reasoning we do not need to know if there were leap years.
+
+Example of an expected behavior.
+- Current date: 7/31/2023
+- Submitted date: 12/31/2022
+- Expected output: 31 days, 6 months, 0 years.
+
+
+Although the entered date begins a day before the new year and the current one is called month 7, not exactly 7 months have passed, but every time there is an end of the month, 31 days are fulfilled until the next day. turns one month This is because we are adding continuity to the months measure.
+
 
