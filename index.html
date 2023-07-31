@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="/style.css">
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="contenido">
+
+    <form class="form-entradas" novalidate>
+
+       <div class="inputs">
+        <div class="entrada">
+          <label for="dia">Day</label>
+          <input step="1" min="1" max="31" placeholder="DD" type="number" id="dia" required/>
+          <div class="error">Hola</div>
+        </div>
+        
+        <div class="entrada">
+          <label for="mes">Month</label>
+          <input min="1" max="12" placeholder="MM" type="number" id="mes" required/>
+          <div class="error">Hola</div>
+        </div>
+      
+        <div class="entrada">
+          <label for="anho">Year</label>
+          <input min="1900" placeholder="YY" max="2100" type="number" id="anho" required/>
+          <div class="error">Hola</div>
+
+        </div>
+      </div>
+
+      <div class="linea">
+        <hr>
+        <button type="submit">
+          <img src="/assets/images/icon-arrow.svg" alt="flecha">
+        </button>
+      </div>
+    </form>
+
+  
+    <div class="salida">
+      <span class="salida-years">--</span> years <br>
+      <span class="salida-months">--</span> months <br>
+      <span class="salida-days">--</span> days
+    </div>
+
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Frander Mena</a>.
+  </div>
+
+  <script src="/main.js"></script>
+</body>
+</html>
