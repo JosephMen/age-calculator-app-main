@@ -45,7 +45,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://age-calculator-frander.netlify.app/)
+- Solution URL: [Live site](https://age-calculator-frander.netlify.app/)
 
 
 ## My process
