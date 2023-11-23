@@ -76,15 +76,13 @@ formulario.addEventListener('submit', (event) => {
     const ingresadoEsMesMayor = mesActual < mesIngresado
     const ingresadoEsMesigual = mesActual === mesActual
     const ingresadoEsDiaMayor = diaActual < diaIngresado
+    const ingresadoEsAnioIgual = anioActual === anioIngresado
 
-    const one_or_zero = ingresadoEsMesMayor || (ingresadoEsMesigual && ingresadoEsDiaMayor)
-
+    const one_or_zero = ingresadoEsMesMayor || (ingresadoEsMesigual && ingresadoEsDiaMayor && !ingresadoEsAnioIgual)
     let year_difference = anioActual - anioIngresado
-
-    console.log("Actual", anioActual, mesActual, diaActual)
-    console.log("Ingresada", anioIngresado, mesIngresado, diaIngresado)
     const age = year_difference - one_or_zero
-    let months = mesIngresado <= mesActual ? (mesActual - mesIngresado) : (11 - mesIngresado) + mesActual + 1
+
+    let months = mesIngresado <= mesActual ? (mesActual - mesIngresado) : (12 - mesIngresado) + mesActual
     let days = diaIngresado
     if(mesIngresado > mesActual){
         let diasMesPasadoAlActual = (mesActual === 0 ? 31 : cantidadDias(mesActual, anioIngresado))
@@ -100,7 +98,7 @@ formulario.addEventListener('submit', (event) => {
             days = diaActual - diaIngresado
         }else{
             days = (cantidadDias(mesActual, anioActual) - diaIngresado) + diaActual
-            months -= 1
+            months -= months === 0 ? 0 : 1
         }
 
     }
